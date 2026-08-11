@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="Styles/general.css">
+    <link rel="stylesheet" href="Styles/sidebar.css">
+    <link rel="stylesheet" href="Styles/dashboard.css">
+    <link rel="stylesheet" href="Styles/analysis.css">
+    <link rel="stylesheet" href="Styles/jobroles.css">
+
+  </head>
+  <body>
+    <div class="sidebar">
+      <div id="sidebar-icon-container">
+        <img id="sidebar-icon" src="icons/jobmaiker.svg">
+      </div>
+
+      <div id="sidebar-menu">
+        <div class="sidebar-tab" data-target="dashboard-content">
+          <img class="sidebar-icon" src="icons/dashboard.svg">
+          <a class="sidebar-button" id="dashboard-tab" href="#dashboard-content">Dashboard</a>
+        </div>
+        <div class="sidebar-tab" data-target="analysis-content">
+          <img class="sidebar-icon" src="icons/skill.svg">
+          <a class="sidebar-button" id="analysis-tab" href="#analysis-content">Analysis</a>
+        </div>
+        <div class="sidebar-tab" data-target="jobroles-content">
+          <img class="sidebar-icon" src="icons/jobroles.svg">
+          <a class="sidebar-button" id="jobroles-tab" href="#jobroles-content">Find Jobs</a>
+        </div>
+        <div class="sidebar-tab" data-target="bookmark-content">
+          <img class="sidebar-icon" src="icons/bookmark.svg">
+          <a class="sidebar-button" id="bookmark-tab" href="#bookmark-content">Bookmarks</a>
+        </div>
+      </div>
+      <div id="sidebar-profile-tab">
+        <img id="sidebar-profile-icon" src="icons/profileicon.svg">
+        <div id="profile-button">Profile</div>
+      </div>
+    </div>
+
+    <div id="main-content">
+
+      <!-- DASHBOARD -->
+      <div id="dashboard-content" class="page-section">
+        <h1 class="section-title">Dashboard</h1>
+        <p class="welcome-message">Wecome back, <span id="welcome-user">Hirushan</span>!</p>
+        <div id="dashboard-cards">
+          <div id="resumescore-card">
+            <div class="nc1">Resume Score</div>
+            <div class="nc2">89%</div>
+            <div class="nc3">+3% this week</div>
+          </div>
+          <div id="jobmatch-card">
+            <div class="nc1">Job Roles</div>
+            <div class="nc2">19</div>
+            <div class="nc3">+1 this week</div>
+          </div>
+          <div id="bmjob-card">
+            <div class="nc1">Bookmarked Jobs</div>
+            <div class="nc2">10</div>
+            <div class="nc3">+3 this week</div>
+          </div>
+          <div id="skills-card">
+            <div class="nc1">Skills</div>
+            <div id="skill-cloud">
+            </div>
+          </div>
+        </div>
+        <div id="job-match-section">
+          <div id="job-match-section-top">
+            <div id="job-match-section-title">
+              Latest job matches
+            </div>
+            <div id="job-match-section-viewall">
+              View all
+            </div>
+          </div>
+          <div class="dashboard-job-matches-list">
+            <div class="job-card">
+              <div class="job-card-left">
+                <h3 class="job-card-title" id="job-role-dashboard1">Software Engineer</h3>
+                <div class="job-card-company" id="company-dashboard1">WSO2</div>
+                <div class="job-card-location">
+                  <img src="icons/location.svg" alt="Pin">
+                  <span id="location-dashboard1">Colombo, Sri Lanka</span>
+                </div>
+                <div class="job-card-salary">LKR 150,000 - 250,000</div>
+              </div>
+              <div class="job-card-right">
+                <div class="job-match-badge">94% Match</div>
+                <div class="job-card-actions">
+                  <button class="job-btn-visit">Visit</button>
+                  <button class="job-btn-save">
+                    <span>Save</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="job-card">
+              <div class="job-card-left">
+                <h3 class="job-card-title">Quality Assurance Engineer</h3>
+                <div class="job-card-company">Virtusa</div>
+                <div class="job-card-location">
+                  <img src="icons/location.svg" alt="Pin">
+                  <span>Bambalapitiya, Colombo</span>
+                </div>
+                <div class="job-card-salary">LKR 140,000 - 220,000</div>
+              </div>
+              <div class="job-card-right">
+                <div class="job-match-badge">90% Match</div>
+                <div class="job-card-actions">
+                  <button class="job-btn-visit">Visit</button>
+                  <button class="job-btn-save">
+                    <span>Save</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="job-card">
+              <div class="job-card-left">
+                <h3 class="job-card-title">Developer</h3>
+                <div class="job-card-company">Sysco LABS</div>
+                <div class="job-card-location">
+                  <img src="icons/location.svg" alt="Pin">
+                  <span>Colombo, Sri Lanka</span>
+                </div>
+                <div class="job-card-salary">LKR 160,000 - 260,000</div>
+              </div>
+              <div class="job-card-right">
+                <div class="job-match-badge">89% Match</div>
+                <div class="job-card-actions">
+                  <button class="job-btn-visit">Visit</button>
+                  <button class="job-btn-save">
+                    <span>Save</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FIND JOBS -->
+      <div id="jobroles-content" class="page-section">
+        <h1 class="section-title">Find Jobs</h1>
+        <p class="job-roles-subtitle">Jobs that best match your profile.</p>
+
+        <div class="job-filter-bar">
+          <div class="filter-group-left">
+            <select class="job-filter-select" id="location-filter">
+              <option value="all">All locations</option>
+              <option value="Colombo, Sri Lanka">Colombo, Sri Lanka</option>
+              <option value="Bambalapitiya, Colombo">Bambalapitiya, Colombo</option>
+              <option value="Remote">Remote</option>
+            </select>
+
+            <select class="job-filter-select" id="jobtype-filter">
+              <option value="" disabled selected hidden>Job types</option>
+              <option value="all">All types</option>
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Contract">Contract</option>
+            </select>
+
+            <select class="job-filter-select" id="experience-filter">
+              <option value="" disabled selected hidden>Experience level</option>
+              <option value="all">All experience levels</option>
+              <option value="Entry Level">Entry Level</option>
+              <option value="Mid Level">Mid Level</option>
+              <option value="Senior Level">Senior Level</option>
+            </select>
+          </div>
+
+          <div class="filter-group-right">
+            <span>Sort by:</span>
+            <select class="job-filter-select" id="sort-filter">
+              <option value="match">Best match</option>
+              <option value="newest">Newest</option>
+              <option value="salary-high">Highest salary</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="job-list-container" id="job-roles-list">
+          <!-- Job cards rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- Analysis -->
+      <div id="analysis-content" class="page-section">
+        <h1 class="section-title">Analysis</h1>
+        <p id="analyse-message">Overview:</p>
+
+        <div id="analysis-cards-r1">
+
+          <div id="resumescore-card-analysis">
+            <div class="ac1">Resume Score</div>
+            <div class="ac2">89%</div>
+            <div class="ac3" id="res-score-gain-analysis">+3% this week</div>
+          </div>
+
+          <div id="experience-card">
+            <div class="ac1">Experience</div>
+            <div class="ac2" id="experience-years">3.2 Years</div>
+            <div class="ac3">Total Experience</div>
+          </div>
+
+          <div id="education-card">
+            <div class="ac1">Education</div>
+            <div id="education-scroll">
+              <div id="degree-uni">
+                <div class="degree">BSc in Computer Scienceeee</div>
+                <div class="university-name">University of Peradeniya</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button id="analysis-update-resume">Update your resume</button>
+
+        <div id="analysis-cards-r2">
+          <p id="analysis-cards-r2-title">Top matching roles for you:</p>
+
+          <div id="analysis-job-roles">
+            <div class="job-description">
+              <p class="job-title">Software Engineering</p>
+              <div class="job-title-details">
+                <p class="job-title-para">Solar energy is rapidly transforming the global power landscape. By harnessing the sun's rays through photovoltaic panels, homeowners and businesses can drastically reduce their electricity bills while lowering their carbon footprint. For instance, cities that invest in large-scale solar farms frequently report a measurable decline in greenhouse gas emissions within just a few years.</p>
+              </div>
+              <div class="analysis-job-search">
+                <img src="icons/search.svg">
+                <div>Search</div>
+              </div>
+            </div>
+            <div class="job-description">
+              <p class="job-title">Quallity Assuarance Engineer</p>
+              <div class="job-title-details">
+                <p class="job-title-para">Solar energy is rapidly transforming the global power landscape. By harnessing the sun's rays through photovoltaic panels, homeowners and businesses can drastically reduce their electricity bills while lowering their carbon footprint. For instance, cities that invest in large-scale solar farms frequently report a measurable decline in greenhouse gas emissions within just a few years.</p>
+              </div>
+              <div class="analysis-job-search">
+                <img src="icons/search.svg">
+                <div>Search</div>
+              </div>
+            </div>
+            <div class="job-description">
+              <p class="job-title">Quallity Assuarance Engineer</p>
+              <div class="job-title-details">
+                <p class="job-title-para">Solar energy is rapidly transforming the global power landscape. By harnessing the sun's rays through photovoltaic panels, homeowners and businesses can drastically reduce their electricity bills while lowering their carbon footprint. For instance, cities that invest in large-scale solar farms frequently report a measurable decline in greenhouse gas emissions within just a few years.</p>
+              </div>
+              <div class="analysis-job-search">
+                <img src="icons/search.svg">
+                <div>Search</div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOOKMARKS -->
+      <div id="bookmark-content" class="page-section">
+        <h1 class="section-title">Bookmarks</h1>
+        <p class="job-roles-subtitle">Jobs you have saved for later</p>
+
+        <div class="job-filter-bar">
+          <div class="filter-group-left">
+            <select class="job-filter-select" id="bm-location-filter">
+              <option value="all">All locations</option>
+              <option value="Colombo, Sri Lanka">Colombo, Sri Lanka</option>
+              <option value="Bambalapitiya, Colombo">Bambalapitiya, Colombo</option>
+              <option value="Remote">Remote</option>
+            </select>
+
+            <select class="job-filter-select" id="bm-jobtype-filter">
+              <option value="" disabled selected hidden>Job types</option>
+              <option value="all">All types</option>
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Contract">Contract</option>
+            </select>
+
+            <select class="job-filter-select" id="bm-experience-filter">
+              <option value="" disabled selected hidden>Experience level</option>
+              <option value="all">All experience levels</option>
+              <option value="Entry Level">Entry Level</option>
+              <option value="Mid Level">Mid Level</option>
+              <option value="Senior Level">Senior Level</option>
+            </select>
+          </div>
+
+          <div class="filter-group-right">
+            <span>Sort by:</span>
+            <select class="job-filter-select" id="bm-sort-filter">
+              <option value="match">Best match</option>
+              <option value="newest">Newest</option>
+              <option value="salary-high">Highest salary</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="job-list-container" id="bookmarks-list">
+          <!-- Bookmarked job cards rendered dynamically -->
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <script>
+      // Navigation of the SPA
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".sidebar-tab");
+        const sections = document.querySelectorAll(".page-section");
+
+        function showSection(targetId) {
+          sections.forEach(section => {
+            section.classList.toggle("active", section.id === targetId);
+          });
+
+          tabs.forEach(tab => {
+            tab.classList.toggle("active-tab", tab.dataset.target === targetId);
+          });
+
+          history.replaceState(null, "", `#${targetId}`);
+        }
+
+        tabs.forEach(tab => {
+          tab.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = tab.dataset.target;
+            showSection(targetId);
+          });
+        });
+        const initial = window.location.hash.replace("#", "") || "dashboard-content";
+        showSection(initial);
+      });
+
+
+
+      // Render skills to skill cloud in dashboard
+      function renderSkills(skills) {
+        const container = document.getElementById("skill-cloud");
+        if (!container) return;
+        container.innerHTML = ""; // clear existing/static tags
+
+        skills.forEach(skill => {
+          const tag = document.createElement("div");
+          tag.className = "skill-tag";
+          tag.textContent = skill;
+          container.appendChild(tag);
+        });
+      }
+      const mockSkills = ["HTML", "CSS", "JavaScript", "Python", "Java", "SQL", "React", "Node"];
+      renderSkills(mockSkills);
+
+      const mockVacancies = [{job_role:"Software Engineer", company:"WSO2", location:"Colombo, Sri Lanka", link:"#"}];
+
+      function renderJobRole(vacancy){
+        const roleEl = document.getElementById("job-role-dashboard1");
+        const compEl = document.getElementById("company-dashboard1");
+        const locEl = document.getElementById("location-dashboard1");
+        if (roleEl) roleEl.innerHTML = vacancy[0].job_role;
+        if (compEl) compEl.innerHTML = vacancy[0].company;
+        if (locEl) locEl.innerHTML = vacancy[0].location;
+      }
+      renderJobRole(mockVacancies);
+
+
+
+      // Sample Data
+      const jobRolesData = [
+        {
+          id: 1,
+          title: "Software Engineer",
+          company: "WSO2",
+          location: "Colombo, Sri Lanka",
+          salary: "LKR 150,000 - 250,000",
+          salaryValue: 250000,
+          matchScore: 94,
+          type: "Full-time",
+          experience: "Mid Level",
+          dateAdded: 10
+        },
+        {
+          id: 2,
+          title: "Full Stack Developer",
+          company: "WSO2",
+          location: "Colombo, Sri Lanka",
+          salary: "LKR 150,000 - 250,000",
+          salaryValue: 250000,
+          matchScore: 94,
+          type: "Full-time",
+          experience: "Senior Level",
+          dateAdded: 9
+        },
+        {
+          id: 3,
+          title: "Backend Developer",
+          company: "WSO2",
+          location: "Colombo, Sri Lanka",
+          salary: "LKR 150,000 - 250,000",
+          salaryValue: 250000,
+          matchScore: 94,
+          type: "Full-time",
+          experience: "Mid Level",
+          dateAdded: 8
+        },
+        {
+          id: 4,
+          title: "Quality Assurance Engineer",
+          company: "Virtusa",
+          location: "Bambalapitiya, Colombo",
+          salary: "LKR 140,000 - 220,000",
+          salaryValue: 220000,
+          matchScore: 90,
+          type: "Full-time",
+          experience: "Entry Level",
+          dateAdded: 7
+        },
+        {
+          id: 5,
+          title: "Developer",
+          company: "Sysco LABS",
+          location: "Colombo, Sri Lanka",
+          salary: "LKR 160,000 - 260,000",
+          salaryValue: 260000,
+          matchScore: 89,
+          type: "Full-time",
+          experience: "Mid Level",
+          dateAdded: 6
+        },
+        {
+          id: 6,
+          title: "DevOps Engineer",
+          company: "IFS",
+          location: "Remote",
+          salary: "LKR 180,000 - 300,000",
+          salaryValue: 300000,
+          matchScore: 86,
+          type: "Contract",
+          experience: "Senior Level",
+          dateAdded: 5
+        }
+      ];
+
+      // Sample Data for Bookmarks Page
+      const bookmarksData = [
+        {
+          id: 101,
+          title: "Software Engineer",
+          company: "WSO2",
+          location: "Colombo, Sri Lanka",
+          salary: "LKR 150,000 - 250,000",
+          salaryValue: 250000,
+          matchScore: 94,
+          type: "Full-time",
+          experience: "Mid Level",
+          dateAdded: 5
+        },
+        {
+          id: 102,
+          title: "Full Stack Developer",
+          company: "WSO2",
+          location: "Colombo, Sri Lanka",
+          salary: "LKR 150,000 - 250,000",
+          salaryValue: 250000,
+          matchScore: 94,
+          type: "Full-time",
+          experience: "Senior Level",
+          dateAdded: 4
+        },
+        {
+          id: 103,
+          title: "Backend Developer",
+          company: "WSO2",
+          location: "Colombo, Sri Lanka",
+          salary: "LKR 150,000 - 250,000",
+          salaryValue: 250000,
+          matchScore: 94,
+          type: "Full-time",
+          experience: "Mid Level",
+          dateAdded: 3
+        },
+        {
+          id: 104,
+          title: "Senior React Developer",
+          company: "99x",
+          location: "Colombo, Sri Lanka",
+          salary: "LKR 280,000 - 400,000",
+          salaryValue: 400000,
+          matchScore: 92,
+          type: "Full-time",
+          experience: "Senior Level",
+          dateAdded: 2
+        },
+        {
+          id: 105,
+          title: "UI/UX Designer",
+          company: "Creative Software",
+          location: "Colombo, Sri Lanka",
+          salary: "LKR 130,000 - 210,000",
+          salaryValue: 210000,
+          matchScore: 89,
+          type: "Full-time",
+          experience: "Mid Level",
+          dateAdded: 1
+        }
+      ];
+
+      function renderJobCard(job) {
+        return `
+          <div class="job-card" data-id="${job.id}">
+            <div class="job-card-left">
+              <h3 class="job-card-title">${job.title}</h3>
+              <div class="job-card-company">${job.company}</div>
+              <div class="job-card-location">
+                <img src="icons/location.svg" alt="Pin">
+                <span>${job.location}</span>
+              </div>
+              <div class="job-card-salary">${job.salary}</div>
+            </div>
+            <div class="job-card-right">
+              <div class="job-match-badge">${job.matchScore}% Match</div>
+              <div class="job-card-actions">
+                <button class="job-btn-visit">Visit</button>
+                <button class="job-btn-save">
+                  <span>Save</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderBookmarkCard(job) {
+        return `
+          <div class="job-card" data-id="${job.id}">
+            <div class="job-card-left">
+              <h3 class="job-card-title">${job.title}</h3>
+              <div class="job-card-company">${job.company}</div>
+              <div class="job-card-location">
+                <img src="icons/location.svg" alt="Pin">
+                <span>${job.location}</span>
+              </div>
+              <div class="job-card-salary">${job.salary}</div>
+            </div>
+            <div class="job-card-right">
+              <div class="job-match-badge">${job.matchScore}% Match</div>
+              <div class="job-card-actions">
+                <button class="job-btn-visit">Visit</button>
+                <button class="job-btn-save bookmarked">
+                  <span>Save</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderStaticJobs() {
+        const jobRolesListEl = document.getElementById("job-roles-list");
+        if (jobRolesListEl) {
+          jobRolesListEl.innerHTML = jobRolesData.map(renderJobCard).join("");
+        }
+
+        const bookmarksListEl = document.getElementById("bookmarks-list");
+        if (bookmarksListEl) {
+          bookmarksListEl.innerHTML = bookmarksData.map(renderBookmarkCard).join("");
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", renderStaticJobs);
+      renderStaticJobs();
+
+
+
+
+      // Resize the page according to the scaling of windows
+      (function () {
+        const DESIGN_DPR = 1.25;
+
+        function applyScale() {
+          const scale = DESIGN_DPR / window.devicePixelRatio;
+          document.documentElement.style.zoom = scale;
+        }
+
+        applyScale();
+        window.addEventListener("resize", applyScale);
+      })();
+    </script>
+  </body>
+</html>

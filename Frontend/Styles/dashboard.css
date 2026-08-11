@@ -1,0 +1,230 @@
+.welcome-message{
+    font-size: 18px;
+}
+#welcome-user{
+    font-weight:800;
+    color:rgb(48, 48, 188);
+}
+#dashboard-cards{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width:fit-content;
+    max-width: 1300px;
+    padding:10px;
+    padding-right:0px;
+    margin-top:20px;
+}
+
+#jobmatch-card,#bmjob-card,#resumescore-card{
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    background-color:white;
+    width:160px;
+    margin-right:40px;
+    height:160px;
+    border-radius: 10px;
+    transition:background-color 0.3s ease;
+}
+
+#jobmatch-card:hover,#bmjob-card:hover,#resumescore-card:hover,#skills-card:hover{
+    background-color: aquamarine;
+}
+
+.nc1{
+    font-size:14px;
+    font-weight:600;
+    margin-top:16px;
+    margin-left:16px;
+    text-align:left;
+    color:rgb(94, 94, 94);
+}
+.nc2{
+   margin-top:28px;
+   font-size:36px;
+   font-weight:600;
+   text-align:center;
+
+}
+.nc3{
+    margin-top:auto;
+    margin-bottom:12px;
+    font-weight:700;
+    color:rgb(47, 214, 47);
+    text-align:center;
+}
+#skills-card{
+    display:flex;
+    flex-direction: column;
+    width:500px;
+    background-color:white;
+    border-radius: 10px;
+    height:160px;
+    transition:background-color 0.3s ease;
+}
+#skill-cloud{
+    margin-top:12px;
+    padding-left:22px;
+    padding-right:22px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    overflow-y:auto;
+    scrollbar-width: none;
+}
+.skill-tag{
+    background-color: rgb(91, 151, 181);
+    font-weight:500;
+    padding:7px;
+    padding-bottom:8px ;
+    width:fit-content;
+    border:2px solid transparent;
+    border-radius:15px;
+    color:white;
+    cursor:pointer;
+    transition:background-color 0.4s ease;
+}
+.skill-tag:hover{
+    background-color: white;
+    color: rgb(91, 151, 181);
+    border:2px,solid,rgb(91, 151, 181);
+}
+#jobmatch-card,#bmjob-card,#resumescore-card,#skills-card{
+    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+#job-match-section{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    min-width: fit-content;
+    max-width: 1300px;
+    margin-top:20px;
+}
+
+.dashboard-job-matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 15px;
+}
+
+#job-match-section-top{
+    margin-top:30px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height:45px;
+}
+#job-match-section-title{
+    font-size:18px;
+    font-weight:600;
+}
+#job-match-section-viewall{
+    padding:8px;
+    color: rgb(91, 151, 181);
+    font-weight:700;
+    cursor:pointer;
+    border:2px solid transparent;
+    border-radius:10px;
+    margin-right:10px;
+    transition:border 0.3s ease;
+}
+#job-match-section-viewall:hover{
+    border:2px solid rgb(91, 151, 181);
+    border-radius:10px;
+}
+.job-match-section-item{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:5px;
+    margin-bottom:5px;
+    height:40px;
+    flex:1;
+    background-color: white;
+    border-radius:12px;
+    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+.jmsiim{
+    margin-left:55px;
+    height:40px;
+    width:40px;
+    border-style:solid;
+}
+.jmsi1{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left:20px;
+    height:65%;
+    min-width:700px;
+}
+.job-role-dashboard{
+    font-size: 18px ;
+    font-weight:600;
+}
+.company-dashboard{
+    font-size:17px;
+    padding-bottom:5px;
+}
+.location-dashboard{
+    font-size:14px;
+    color:rgb(108, 108, 108);
+}
+.jmsi2{
+    margin-right:30px;
+}
+.matchscore-dashboard{
+    font-size:18px;
+    font-weight:700;
+    color:rgb(47, 214, 47);
+}
+.jmsi3, .jmsi4 {
+    margin-right: 15px;
+    border: 2px solid rgb(91, 151, 181);
+    color: rgb(91, 151, 181);
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 8px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+}
+
+.jmsi3:hover, .jmsi4:hover {
+    background-color: rgb(91, 151, 181);
+    color: white;
+    box-shadow: 0px 4px 12px rgba(91, 151, 181, 0.3);
+}
+
+.jmsi4.bookmarked {
+    background-color: rgb(91, 151, 181);
+    color: white;
+}
+
+.jmsi4.bookmarked:hover {
+    background-color: #e11d48;
+    border-color: #e11d48;
+    color: white;
+}
+
+.jmsi3 svg,
+.jmsi4 svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    transition: stroke 0.3s ease, fill 0.3s ease;
+}
+
+.jmsi4.bookmarked svg {
+    fill: currentColor;
+    stroke: currentColor;
+}

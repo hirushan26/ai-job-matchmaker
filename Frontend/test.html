@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="Styles/general.css">
+    <link rel="stylesheet" href="Styles/sidebar.css">
+    <link rel="stylesheet" href="Styles/dashboard.css">
+
+    <style>
+      .welcome-message{
+    font-size: 18px;
+}
+#welcome-user{
+    font-weight:800;
+    color:rgb(48, 48, 188);
+}
+#dashboard-cards{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width:fit-content;
+    max-width: 1300px;
+    padding:10px;
+    padding-right:0px;
+    margin-top:20px;
+}
+
+#jobmatch-card,#bmjob-card,#resumescore-card{
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    background-color:white;
+    width:160px;
+    margin-right:40px;
+    height:160px;
+    border-radius: 10px;
+    transition:background-color 0.3s ease;
+}
+
+#jobmatch-card:hover{
+    background-color: aquamarine;
+}
+#bmjob-card:hover{
+    background-color: aquamarine;
+}
+#resumescore-card:hover{
+    background-color: aquamarine;
+}
+
+.nc1{
+    font-size:14px;
+    font-weight:600;
+    margin-top:16px;
+    margin-left:16px;
+    text-align:left;
+    color:rgb(94, 94, 94);
+}
+.nc2{
+   margin-top:28px;
+   font-size:36px;
+   font-weight:600;
+   text-align:center;
+
+}
+.nc3{
+    margin-top:auto;
+    margin-bottom:12px;
+    font-weight:700;
+    color:rgb(47, 214, 47);
+    text-align:center;
+}
+#skills-card{
+    display:flex;
+    flex-direction: column;
+    width:500px;
+    background-color:white;
+    border-radius: 10px;
+    height:160px;
+    transition:background-color 0.3s ease;
+}
+#skills-card:hover{
+    background-color: aquamarine;
+}
+#skill-cloud{
+    margin-top:12px;
+    padding-left:22px;
+    padding-right:22px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    overflow-y:auto;
+    scrollbar-width: none;
+}
+.skill-tag{
+    background-color: rgb(91, 151, 181);
+    padding:10px;
+    padding-top:7px;
+    width:fit-content;
+    border-radius:15px;
+    color:white;
+    cursor:pointer;
+    transition:background-color 0.3s ease;
+}
+.skill-tag:hover{
+    background-color: white;
+    color: rgb(91, 151, 181);
+    padding:8px;
+    padding-top:5px;
+    border-style:solid;
+    border-width:2px;
+    border-color:rgb(91, 151, 181);
+}
+#jobmatch-card,#bmjob-card,#resumescore-card,#skill-cloud{
+    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+#job-match-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:430px;
+    width:100%;
+    min-width: fit-content;
+    max-width: 1300px;
+}
+
+#job-match-section-top{
+    margin-top:30px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height:45px;
+}
+#job-match-section-title{
+    font-size:18px;
+    font-weight:600;
+}
+#job-match-section-viewall{
+    padding:8px;
+    color: rgb(91, 151, 181);
+    font-weight:700;
+    cursor:pointer;
+    border:2px solid transparent;
+    border-radius:10px;
+    margin-right:10px;
+    transition:border 0.3s ease;
+}
+#job-match-section-viewall:hover{
+    border:2px solid rgb(91, 151, 181);
+    border-radius:10px;
+}
+.job-match-section-item{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:5px;
+    margin-bottom:5px;
+    height:40px;
+    flex:1;
+    background-color: white;
+    border-radius:12px;
+    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+.jmsiim{
+    margin-left:55px;
+    height:40px;
+    width:40px;
+    border-style:solid;
+}
+.jmsi1{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left:20px;
+    height:65%;
+    min-width:700px;
+}
+.job-role-dashboard{
+    font-size: 18px ;
+    font-weight:600;
+}
+.company-dashboard{
+    font-size:17px;
+    padding-bottom:5px;
+}
+.location-dashboard{
+    font-size:14px;
+    color:rgb(108, 108, 108);
+}
+.jmsi2{
+    margin-right:30px;
+}
+.matchscore-dashboard{
+    font-size:18px;
+    font-weight:700;
+    color:rgb(47, 214, 47);
+}
+.jmsi3, .jmsi4 {
+    margin-right: 15px;
+    border: 2px solid rgb(91, 151, 181);
+    color: rgb(91, 151, 181);
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 8px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+}
+
+.jmsi3:hover, .jmsi4:hover {
+    background-color: rgb(91, 151, 181);
+    color: white;
+    box-shadow: 0px 4px 12px rgba(91, 151, 181, 0.3);
+}
+
+.jmsi4.bookmarked {
+    background-color: rgb(91, 151, 181);
+    color: white;
+}
+
+.jmsi4.bookmarked:hover {
+    background-color: #e11d48;
+    border-color: #e11d48;
+    color: white;
+}
+
+.jmsi3 svg, .jmsi3 img,
+.jmsi4 svg, .jmsi4 img {
+    width: 16px;
+    height: 16px;
+}
+body{
+    font-family:Geomini,Arial;
+    margin:0;
+    padding-left:300px;
+    padding-right:50px;
+    background-color: rgb(240, 240, 240);
+}
+.page-section {
+    display: none;
+}
+.page-section.active {
+    display: block;
+}
+button{
+    font-family: Geomini,Arial;
+}
+
+.sidebar{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    width:250px;
+    align-items: center;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    z-index: 0;
+    border-right-style:solid;
+    border-color: rgb(209, 209, 209);
+    border-width:1px;
+}
+#sidebar-icon{
+    height:60px;
+}
+#sidebar-icon-container{
+    margin-top:20px;
+}
+#sidebar-menu{
+    display:flex;
+    flex-direction:column;
+    height:100px;
+    margin-top:5px;
+    margin-bottom:100px;
+    min-height: fit-content;
+
+}
+.sidebar-tab{
+    display:flex;
+    flex-direction: row;
+    width:200px;
+    height:40px;
+    background-color: white;
+    border:2px solid transparent;
+    margin-bottom:20px;
+    cursor:pointer;
+    border-radius:14px;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    cursor: pointer;
+}
+.sidebar-tab.active-tab {
+    font-weight: 700;
+    background-color: aquamarine;
+    border:2px solid #34a17b;
+    box-shadow:0px 5px 0px rgba(0, 0, 0, 1);
+}
+        
+.sidebar-icon{
+    margin-left:10px;
+}
+.sidebar-button{
+    margin-left:15px;
+    font-size:20px;
+    font-weight:500;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.sidebar-tab:hover{
+    background-color: aquamarine;
+    border:2px solid #34a17b;
+}
+#sidebar-profile-tab{
+    margin-bottom:15px;
+    background-color: rgb(243, 243, 243);
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:200px;
+    border-radius:100px;
+    transition: background-color 0.3s ease;
+    padding:4px;
+    cursor:pointer;
+    border: 2px solid transparent;
+}
+#sidebar-profile-icon{
+    width:50px;
+}
+#profile-button{
+    border-style:none;
+    width:fit-content;
+    margin-left:35px;
+    font-size:20px;
+    font-weight:500;
+}
+#sidebar-profile-tab:hover{
+    background-color: aquamarine;
+    color:#0d6244;
+    border-color:#0d6244;
+
+}
+
+
+    </style>
+
+  </head>
+  <body>
+    <div class="sidebar">
+      <div id="sidebar-icon-container">
+        <img id="sidebar-icon" src="icons/jobmaiker.svg">
+      </div>
+
+      <div id="sidebar-menu">
+        <div class="sidebar-tab" data-target="dashboard-content">
+          <img class="sidebar-icon" src="icons/dashboard.svg">
+          <a class="sidebar-button" id="dashboard-tab" href="#dashboard-content">Dashboard</a>
+        </div>
+        <div class="sidebar-tab" data-target="jobroles-content">
+          <img class="sidebar-icon" src="icons/jobroles.svg">
+          <a class="sidebar-button" id="jobroles-tab" href="#jobroles-content">Job Roles</a>
+        </div>
+        <div class="sidebar-tab" data-target="skills-content">
+          <img class="sidebar-icon" src="icons/skill.svg">
+          <a class="sidebar-button" id="skills-tab" href="#skills-content">Skills</a>
+        </div>
+        <div class="sidebar-tab" data-target="bookmark-content">
+          <img class="sidebar-icon" src="icons/bookmark.svg">
+          <a class="sidebar-button" id="bookmark-tab" href="#bookmark-content">Bookmarks</a>
+        </div>
+      </div>
+      <div id="sidebar-profile-tab">
+        <img id="sidebar-profile-icon" src="icons/profileicon.svg">
+        <div id="profile-button">Profile</div>
+      </div>
+    </div>
+
+    <div id="main-content">
+
+      <!-- DASHBOARD -->
+      <div class="wraper">
+      <div id="dashboard-content" class="page-section">
+        <h1>Dashboard</h1>
+        <p class="welcome-message">Wecome back, <span id="welcome-user">Hirushan</span>!</p>
+        <div id="dashboard-cards">
+          <div id="resumescore-card">
+            <div class="nc1">Resume Score</div>
+            <div class="nc2">89%</div>
+            <div class="nc3">+3% this week</div>
+          </div>
+          <div id="jobmatch-card">
+            <div class="nc1">Job Roles</div>
+            <div class="nc2">19</div>
+            <div class="nc3">+1 this week</div>
+          </div>
+          <div id="bmjob-card">
+            <div class="nc1">Bookmarked Jobs</div>
+            <div class="nc2">10</div>
+            <div class="nc3">+3 this week</div>
+          </div>
+          <div id="skills-card">
+            <div class="nc1">Skills</div>
+            <div id="skill-cloud">
+              <div class="skill-tag">HTML</div>
+              <div class="skill-tag">JAVA</div>
+              <div class="skill-tag">Python</div>
+              <div class="skill-tag">JavaScript</div>
+              <div class="skill-tag">React</div>
+              <div class="skill-tag">MySQL</div>
+              <div class="skill-tag">Node.js</div>
+              <div class="skill-tag">HTML</div>
+              <div class="skill-tag">JAVA</div>
+              <div class="skill-tag">Python</div>
+              <div class="skill-tag">JavaScript</div>
+              <div class="skill-tag">React</div>
+              <div class="skill-tag">MySQL</div>
+              <div class="skill-tag">Node.js</div>
+              <div class="skill-tag">JAVA</div>
+              <div class="skill-tag">Python</div>
+              <div class="skill-tag">JavaScript</div>
+              <div class="skill-tag">React</div>
+              <div class="skill-tag">MySQL</div>
+              <div class="skill-tag">Node.js</div>
+            </div>
+          </div>
+        </div>
+        <div id="job-match-section">
+          <div id="job-match-section-top">
+            <div id="job-match-section-title">
+              Latest job matches
+            </div>
+            <div id="job-match-section-viewall">
+              View all
+            </div>
+          </div>
+          <div class="job-match-section-item">
+            <img class="jmsiim" src="zxc">
+            <div class="jmsi1">
+              <div class="job-role-dashboard">Software Engineer</div>
+              <div class="company-dashboard">WSO2</div>
+              <div class="location-dashboard">Colombo,Sri Lanka</div>
+            </div>
+            <div class="jmsi2">Match: <span class="matchscore-dashboard">94%</span></div>
+            <button class="jmsi3">Visit</button>
+            <button class="jmsi4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 17.9808V9.70753C4 6.07416 4 4.25748 5.17157 3.12874C6.34315 2 8.22876 2 12 2C15.7712 2 17.6569 2 18.8284 3.12874C20 4.25748 20 6.07416 20 9.70753V17.9808C20 20.2867 20 21.4396 19.2272 21.8523C17.7305 22.6514 14.9232 19.9852 13.59 19.1824C12.8168 18.7168 12.4302 18.484 12 18.484C11.5698 18.484 11.1832 18.7168 10.41 19.1824C9.0768 19.9852 6.26947 22.6514 4.77285 21.8523C4 21.4396 4 20.2867 4 17.9808Z"></path>
+              </svg>
+              <span>Save</span>
+            </button>
+          </div>
+          <div class="job-match-section-item">
+            <img class="jmsiim" src="zxc">
+            <div class="jmsi1">
+              <div class="job-role-dashboard">Quality Assuarance Engineer</div>
+              <div class="company-dashboard">Virtusa</div>
+              <div class="location-dashboard">Bmbalapitiya,Colombo</div>
+            </div>
+            <div class="jmsi2">Match: <span class="matchscore-dashboard">90%</span></div>
+            <button class="jmsi3">Visit</button>
+            <button class="jmsi4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 17.9808V9.70753C4 6.07416 4 4.25748 5.17157 3.12874C6.34315 2 8.22876 2 12 2C15.7712 2 17.6569 2 18.8284 3.12874C20 4.25748 20 6.07416 20 9.70753V17.9808C20 20.2867 20 21.4396 19.2272 21.8523C17.7305 22.6514 14.9232 19.9852 13.59 19.1824C12.8168 18.7168 12.4302 18.484 12 18.484C11.5698 18.484 11.1832 18.7168 10.41 19.1824C9.0768 19.9852 6.26947 22.6514 4.77285 21.8523C4 21.4396 4 20.2867 4 17.9808Z"></path>
+              </svg>
+              <span>Save</span>
+            </button>
+          </div>
+          <div class="job-match-section-item">
+            <img class="jmsiim" src="zxc">
+            <div class="jmsi1">
+              <div class="job-role-dashboard">Developer</div>
+              <div class="company-dashboard">Syscolabs</div>
+              <div class="location-dashboard">Colombo,Sri Lanka</div>
+            </div>
+            <div class="jmsi2">Match: <span class="matchscore-dashboard">89%</span></div>
+            <button class="jmsi3">Visit</button>
+            <button class="jmsi4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 17.9808V9.70753C4 6.07416 4 4.25748 5.17157 3.12874C6.34315 2 8.22876 2 12 2C15.7712 2 17.6569 2 18.8284 3.12874C20 4.25748 20 6.07416 20 9.70753V17.9808C20 20.2867 20 21.4396 19.2272 21.8523C17.7305 22.6514 14.9232 19.9852 13.59 19.1824C12.8168 18.7168 12.4302 18.484 12 18.484C11.5698 18.484 11.1832 18.7168 10.41 19.1824C9.0768 19.9852 6.26947 22.6514 4.77285 21.8523C4 21.4396 4 20.2867 4 17.9808Z"></path>
+              </svg>
+              <span>Save</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- JOB ROLES (placeholder - replace with your real markup) -->
+      <div id="jobroles-content" class="page-section">
+        <h1>Job Roles</h1>
+        <p>Your job role matches will appear here.</p>
+      </div>
+
+      <!-- SKILLS (placeholder - replace with your real markup) -->
+      <div id="skills-content" class="page-section">
+        <h1>Skills</h1>
+        <p>Your skills breakdown will appear here.</p>
+      </div>
+
+      <!-- BOOKMARKS (placeholder - replace with your real markup) -->
+      <div id="bookmark-content" class="page-section">
+        <h1>Bookmarks</h1>
+        <p>Your bookmarked jobs will appear here.</p>
+      </div>
+
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".sidebar-tab");
+        const sections = document.querySelectorAll(".page-section");
+
+        function showSection(targetId) {
+          sections.forEach(section => {
+            section.classList.toggle("active", section.id === targetId);
+          });
+
+          tabs.forEach(tab => {
+            tab.classList.toggle("active-tab", tab.dataset.target === targetId);
+          });
+
+          // keep the URL hash in sync so refresh/back button works
+          history.replaceState(null, "", `#${targetId}`);
+        }
+
+        tabs.forEach(tab => {
+          tab.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = tab.dataset.target;
+            showSection(targetId);
+          });
+        });
+
+        // Load correct section on page load (supports deep links like index.html#skills-content)
+        const initial = window.location.hash.replace("#", "") || "dashboard-content";
+        showSection(initial);
+      });
+
+      (function () {
+        const DESIGN_DPR = 1.25;
+
+        function applyScale() {
+          const scale = DESIGN_DPR / window.devicePixelRatio;
+          document.documentElement.style.zoom = scale;
+        }
+
+        applyScale();
+        window.addEventListener("resize", applyScale);
+      })();
+    </script>
+  </body>
+</html>

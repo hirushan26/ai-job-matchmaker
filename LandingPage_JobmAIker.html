@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title>JobmAIker</title>
+	<style>
+	  * { box-sizing: border-box; }
+	  body {
+		margin: 0;
+		font-family:Geomini,Arial;
+		background: white;
+		color: #111;
+	  }
+
+
+
+	  /* Header */
+	  header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 60px;
+	  }
+	  
+	  .logo {
+		font-size: 30px;
+	  }
+	  
+	  .logo span {
+		background: #3ee08a;
+		padding: 2px 6px;
+		border-radius: 6px;
+		color: white;
+		font-weight: bold;
+	  }
+	  
+	  nav {
+		display: flex;
+		gap: 40px;
+		font-size: 20px;
+		margin-left: auto;
+		margin-right: 30px;
+	  }
+	  
+	  nav a {
+		text-decoration: none;
+		color: #111;
+	  }
+	  
+	  nav a.active {
+		color: #3b3bff;
+	  }
+	  
+	  .header-buttons {
+		display: flex;
+		gap: 20px;
+	  }
+	  
+	  .btn {
+		padding: 8px 20px;
+		border-radius: 15px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 16px;
+		border: 2px solid transparent;
+	  }
+	  
+	  .btn-signin {
+		color: #22a35c;
+		border-color: #22a35c;
+		background: white;
+	  }
+	  .btn-signin:hover {
+		background: #22a35c;
+		color: white;
+	  }
+		
+	  .btn-register {
+		color: #3b8bff;
+		border-color: #3b8bff;
+		background: white;
+	  }
+	  .btn-register:hover {
+		background: #3b8bff;
+		color: white;
+	  }
+
+
+
+	  /* Hero */
+	  .hero {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 4px 60px;
+	  }
+	  
+	  .hero-text {
+		max-width: 620px;
+	  }
+	  
+	  .hero-text h1 {
+		font-size: 60px;
+		line-height: 1.1;
+		margin: 0 0 20px 0;
+	  }
+	  
+	  .hero-text h1 .green {
+		color: #3ee08a;
+	  }
+	  
+	  .hero-text p {
+		font-size: 20px;
+		color: #555;
+		margin-bottom: 30px;
+	  }
+	  
+	  .hero-buttons {
+		display: flex;
+		gap: 15px;
+		margin-bottom: 40px;
+	  }
+	  
+	  .btn-signup {
+		color: #ff4d4d;
+		border-color: #ff4d4d;
+		background: white;
+	  }
+	  .btn-signup:hover {
+		background: #ff4d4d;
+		color: white;
+	  }
+	  
+	  .join-text {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 15px;
+		color: #333;
+		margin-bottom: 20px;
+	  }
+	  
+	  .join-text strong {
+		display: block;
+		
+	  }
+
+	  .hero-image {
+		position: relative;
+		width: 600px;
+	  }
+	  
+	  .hero-image img {
+		width: 600px;
+		height: 400px;
+		border-radius: 20px;
+		display: block;
+	  }
+
+
+
+	  /* Feature cards */
+	  .features {
+		display: flex;
+		gap: 25px;
+		padding: 20px 60px 60px 60px;
+	  }
+	  
+	  .card {
+		flex: 1;
+		background: white;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		padding: 25px;
+		display: flex;
+		gap: 15px;
+		align-items: flex-start;
+	  }
+	  
+	  .card h3 {
+		margin: 0 0 8px 0;
+		font-size: 18px;
+	  }
+	  
+	  .card p {
+		margin: 0;
+		color: #555;
+		font-size: 15px;
+	  }
+	  
+	  .icon {
+		font-size: 30px;
+	  }
+	</style>
+</head>
+
+
+<body>
+	<header>
+	  <div class="logo">Jobm<span>AI</span>ker</div>
+	  <nav>
+		<a href="#" class="active">Home</a>
+		<a href="#">About Us</a>
+		<a href="#">Contact</a>
+	  </nav>
+	  <div class="header-buttons">
+		<a href="#" class="btn btn-signin">Sign In</a>
+		<a href="#" class="btn btn-register">Register</a>
+	  </div>
+	</header>
+
+	<section class="hero">
+	  <div class="hero-text">
+		<h1>Find Your Perfect Job<br>With <span class="green">AI Power</span></h1>
+		<p>Let our AI build your profile and get matched with the best job opportunities</p>
+		<div class="hero-buttons">
+		  <a href="#" class="btn btn-signin">Sign In</a>
+		  <a href="#" class="btn btn-signup">Sign Up</a>
+		</div>
+		<div class="join-text">
+		  <span class="icon">
+			<img src="C:\Users\FAHIM\Desktop\JobmAIker\user-group-02-stroke-rounded.png">
+		  </span>
+		  <span>
+			<strong>Join 1000+ job seekers</strong>
+			who found their dream jobs
+		  </span>
+		</div>
+	  </div>
+
+	  <div class="hero-image">
+		<img src="C:\Users\FAHIM\Desktop\JobmAIker\Pic.png" alt="Job seeker">
+	  </div>
+	</section>
+
+	<section class="features">
+	  <div class="card">
+		<span class="icon">
+			<img src="C:\Users\FAHIM\Desktop\JobmAIker\ai-file-stroke-rounded.png">
+		</span>
+		<div>
+		  <h3>AI Resume Analysis</h3>
+		  <p>Get AI-Powered insights to improve your resume</p>
+		</div>
+	  </div>
+	  <div class="card">
+		<span class="icon">
+			<img src="C:\Users\FAHIM\Desktop\JobmAIker\job-search-stroke-rounded.png">
+		</span>
+		<div>
+		  <h3>Job Role Matching</h3>
+		  <p>Find most suitable job roles for you</p>
+		</div>
+	  </div>
+	  <div class="card">
+		<span class="icon">
+			<img src="C:\Users\FAHIM\Desktop\JobmAIker\globe-02-stroke-rounded.png">
+		</span>
+		<div>
+		  <h3>Real World Vacancies</h3>
+		  <p>Find real world vacancies that matches your skills and experience</p>
+		</div>
+	  </div>
+	</section>
+
+</body>
+</html>

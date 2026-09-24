@@ -1,0 +1,211 @@
+.job-roles-subtitle {
+  font-size: 16px;
+  color: #475569;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.job-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+  max-width: 1300px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filter-group-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-group-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #444;
+}
+
+.job-filter-select {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-family: Geomini, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-filter-select:hover,
+.job-filter-select:focus {
+  border-color: rgb(91, 151, 181);
+  box-shadow: 0px 4px 8px rgba(91, 151, 181, 0.15);
+}
+
+.job-list-container {
+  background-color: white;
+  border: 1.5px solid #dcdcdc;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 1300px;
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 620px;
+  overflow-y: auto;
+  margin-bottom: 40px;
+}
+
+.job-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.job-list-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.job-list-container::-webkit-scrollbar-thumb {
+  background: rgb(91, 151, 181);
+  border-radius: 10px;
+}
+
+.job-list-container::-webkit-scrollbar-thumb:hover {
+  background: #34a17b;
+}
+
+.job-card {
+  background-color: white;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.job-card:hover {
+  border-color: rgb(91, 151, 181);
+  box-shadow: 0px 8px 20px rgba(91, 151, 181, 0.12);
+  background-color: #fafdfd;
+}
+
+.job-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.job-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.job-card-company {
+  font-size: 15px;
+  font-weight: 500;
+  color: #64748b;
+  margin: 2px 0 6px 0;
+}
+
+.job-card-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 400;
+}
+
+.job-card-location img,
+.job-card-location svg {
+  width: 16px;
+  height: 16px;
+  color: #475569;
+}
+
+.job-card-salary {
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  margin-top: 4px;
+}
+
+.job-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.job-match-badge {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(47, 214, 47);
+}
+
+.job-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.job-btn-visit, .job-btn-save {
+  border: 2px solid rgb(91, 151, 181);
+  color: rgb(91, 151, 181);
+  background-color: transparent;
+  border-radius: 25px;
+  padding: 8px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+}
+
+.job-btn-visit:hover {
+  background-color: rgb(91, 151, 181);
+  color: white;
+  box-shadow: 0px 4px 12px rgba(91, 151, 181, 0.3);
+}
+
+.job-btn-save:hover {
+  background-color: rgb(91, 151, 181);
+  color: white;
+  box-shadow: 0px 4px 12px rgba(91, 151, 181, 0.3);
+}
+
+.job-btn-save.bookmarked {
+  background-color: rgb(91, 151, 181);
+  color: white;
+}
+
+.job-btn-save.bookmarked:hover {
+  background-color: #e11d48;
+  border-color: #e11d48;
+  color: white;
+}

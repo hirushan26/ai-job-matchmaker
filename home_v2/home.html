@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobmAIker - Smart AI-Powered Career & Job Matching</title>
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Landing Page Styles -->
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- ================= Navigation Bar ================= -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="home.html" class="nav-brand">
+        <img src="icons/jobmaiker.svg" alt="JobmAIker Logo" class="nav-logo">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="index.html">Dashboard</a></li>
+      </ul>
+
+      <div class="nav-auth">
+        <button type="button" class="btn btn-outline" id="nav-login-btn">Log In</button>
+        <button type="button" class="btn btn-primary" id="nav-signup-btn">Sign Up</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ================= Hero Section ================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- Hero Text -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>✨ Gemini AI Powered</span>
+          </div>
+
+          <h1 class="hero-title">
+            Smart AI-Powered Career & <span>Job Matching</span>
+          </h1>
+
+          <p class="hero-description">
+            Analyze your resume with Gemini AI, uncover verified skill matches, and discover curated tech jobs & internships in Sri Lanka and worldwide.
+          </p>
+
+          <div class="hero-actions">
+            <a href="index.html" class="btn btn-primary btn-large">Get Started Free →</a>
+            <a href="#features" class="btn btn-secondary btn-large">Explore Functions</a>
+          </div>
+
+          <div class="hero-perks">
+            <div class="hero-perk-item">⚡ Instant Resume Parsing</div>
+            <div class="hero-perk-item">🎯 Tailored Intern & Tech Roles</div>
+            <div class="hero-perk-item">🇱🇰 Sri Lanka & Remote Focused</div>
+          </div>
+        </div>
+
+        <!-- Hero Static Preview Card -->
+        <div class="hero-visual">
+          <div class="preview-card">
+            <div class="preview-header">
+              <div class="candidate-info">
+                <h4>Saman Perera</h4>
+                <span class="candidate-tag">Student / Intern</span>
+              </div>
+              <div class="match-badge">
+                <div class="match-label">AI Match Score</div>
+                <div class="match-percent">95%</div>
+              </div>
+            </div>
+
+            <div class="preview-section-title">Verified Skills Extracted</div>
+            <div class="skill-tags">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">Machine Learning</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">FastAPI</span>
+            </div>
+
+            <div class="preview-section-title">Top Recommended Position</div>
+            <div class="matched-job-box">
+              <div class="matched-job-title">Software Engineering Intern</div>
+              <div class="matched-job-meta">
+                <span>🏢 Sysco LABS</span>
+                <span>📍 Colombo, Sri Lanka (Hybrid)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Features Section ================= -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Capabilities</span>
+          <h2 class="section-title">Platform Features</h2>
+          <p class="section-subtitle">
+            JobmAIker streamlines your job search by understanding your unique skills and linking you to the right career opportunities.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="icons/skill.svg" alt="Resume Intelligence" class="feature-icon">
+            </div>
+            <h3 class="feature-title">AI Resume Intelligence</h3>
+            <p class="feature-desc">
+              Upload your PDF or Word resume. Our Gemini AI engine extracts academic credentials, projects, and verified technical & soft skills without manual entry.
+            </p>
+            <ul class="feature-list">
+              <li>PDF & DOCX resume support</li>
+              <li>Career-stage detection (Intern vs Pro)</li>
+              <li>Detailed experience & project breakdown</li>
+            </ul>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="icons/jobroles.svg" alt="Job Discovery" class="feature-icon">
+            </div>
+            <h3 class="feature-title">Precision Job Discovery</h3>
+            <p class="feature-desc">
+              Get matched with real-time tech opportunities suited to your actual skill profile. Automatically filters out senior roles if you're seeking internships.
+            </p>
+            <ul class="feature-list">
+              <li>Focused Sri Lanka tech hubs & Remote</li>
+              <li>Automated career-stage relevance</li>
+              <li>1-click direct links to apply</li>
+            </ul>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="icons/dashboard.svg" alt="Skill Insights" class="feature-icon">
+            </div>
+            <h3 class="feature-title">Skill & Readiness Insights</h3>
+            <p class="feature-desc">
+              Understand where your resume excels and discover missing skills needed for your dream role with transparent percentage-based match scoring.
+            </p>
+            <ul class="feature-list">
+              <li>Transparent % match calculation</li>
+              <li>Technical vs soft skill classification</li>
+              <li>Actionable profile readiness feedback</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= How It Works Section ================= -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Simple Process</span>
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">
+            Three simple steps to unlock tailored tech opportunities.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-number">01</span>
+            <h3>Upload Resume</h3>
+            <p>Drag and drop your latest CV in PDF or DOCX format. The file is securely stored and parsed in seconds.</p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">02</span>
+            <h3>AI Analysis</h3>
+            <p>Gemini AI analyzes your work experience, education, projects, and extracts key technical proficiencies.</p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">03</span>
+            <h3>Get Matched</h3>
+            <p>Explore recommended tech openings with match scores, filter by Sri Lanka or Remote, and apply directly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Call-To-Action Banner ================= -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to Supercharge Your Job Search?</h2>
+          <p>
+            Launch the JobmAIker dashboard now to analyze your resume and discover opportunities tailored to you.
+          </p>
+          <a href="index.html" class="btn btn-secondary btn-large">Launch JobmAIker Dashboard →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="icons/jobmaiker.svg" alt="JobmAIker">
+        </div>
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="index.html">App Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 JobmAIker. All rights reserved.</p>
+        <p>AI-Powered Career & Job Matching Platform</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= Static Auth Modals ================= -->
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="login-modal">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="login-close-btn">&times;</button>
+      <h3 class="modal-title">Welcome Back</h3>
+      <p class="modal-subtitle">Log in to access your JobmAIker dashboard</p>
+
+      <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" class="form-control" placeholder="name@example.com" value="saman.perera@example.com">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" class="form-control" placeholder="••••••••" value="password123">
+        </div>
+        <button type="submit" class="btn btn-primary modal-btn-block">Log In →</button>
+      </form>
+
+      <div class="modal-switch">
+        Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="modal-overlay" id="signup-modal">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="signup-close-btn">&times;</button>
+      <h3 class="modal-title">Create an Account</h3>
+      <p class="modal-subtitle">Join JobmAIker to analyze your resume and get matched</p>
+
+      <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+        <div class="form-group">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" class="form-control" placeholder="e.g. Saman Perera" value="Saman Perera">
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email Address</label>
+          <input type="email" id="signup-email" class="form-control" placeholder="name@example.com" value="saman.perera@example.com">
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" class="form-control" placeholder="••••••••" value="password123">
+        </div>
+        <button type="submit" class="btn btn-primary modal-btn-block">Create Account →</button>
+      </form>
+
+      <div class="modal-switch">
+        Already have an account? <a href="#" id="switch-to-login">Log In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Lightweight Modal Script ================= -->
+  <script>
+    const loginBtn = document.getElementById('nav-login-btn');
+    const signupBtn = document.getElementById('nav-signup-btn');
+    const loginModal = document.getElementById('login-modal');
+    const signupModal = document.getElementById('signup-modal');
+    const loginClose = document.getElementById('login-close-btn');
+    const signupClose = document.getElementById('signup-close-btn');
+    const switchToSignup = document.getElementById('switch-to-signup');
+    const switchToLogin = document.getElementById('switch-to-login');
+
+    function openModal(modal) {
+      modal.classList.add('active');
+    }
+
+    function closeModal(modal) {
+      modal.classList.remove('active');
+    }
+
+    if (loginBtn) loginBtn.addEventListener('click', () => openModal(loginModal));
+    if (signupBtn) signupBtn.addEventListener('click', () => openModal(signupModal));
+
+    if (loginClose) loginClose.addEventListener('click', () => closeModal(loginModal));
+    if (signupClose) signupClose.addEventListener('click', () => closeModal(signupModal));
+
+    if (switchToSignup) switchToSignup.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeModal(loginModal);
+      openModal(signupModal);
+    });
+
+    if (switchToLogin) switchToLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeModal(signupModal);
+      openModal(loginModal);
+    });
+
+    // Close when clicking outside card
+    window.addEventListener('click', (e) => {
+      if (e.target === loginModal) closeModal(loginModal);
+      if (e.target === signupModal) closeModal(signupModal);
+    });
+  </script>
+</body>
+</html>

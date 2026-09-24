@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="Styles/general.css">
+    <link rel="stylesheet" href="Styles/sidebar.css">
+    <link rel="stylesheet" href="Styles/dashboard.css">
+    <link rel="stylesheet" href="Styles/analysis.css">
+
+  </head>
+  <body>
+    <div class="sidebar">
+      <div id="sidebar-icon-container">
+        <img id="sidebar-icon" src="icons/jobmaiker.svg">
+      </div>
+
+      <div id="sidebar-menu">
+        <div class="sidebar-tab" data-target="dashboard-content">
+          <img class="sidebar-icon" src="icons/dashboard.svg">
+          <a class="sidebar-button" id="dashboard-tab" href="#dashboard-content">Dashboard</a>
+        </div>
+        <div class="sidebar-tab" data-target="analysis-content">
+          <img class="sidebar-icon" src="icons/skill.svg">
+          <a class="sidebar-button" id="analysis-tab" href="#analysis-content">Analysis</a>
+        </div>
+        <div class="sidebar-tab" data-target="jobroles-content">
+          <img class="sidebar-icon" src="icons/jobroles.svg">
+          <a class="sidebar-button" id="jobroles-tab" href="#jobroles-content">Find Jobs</a>
+        </div>
+        <div class="sidebar-tab" data-target="bookmark-content">
+          <img class="sidebar-icon" src="icons/bookmark.svg">
+          <a class="sidebar-button" id="bookmark-tab" href="#bookmark-content">Bookmarks</a>
+        </div>
+      </div>
+      <div id="sidebar-profile-tab">
+        <img id="sidebar-profile-icon" src="icons/profileicon.svg">
+        <div id="profile-button">Profile</div>
+      </div>
+    </div>
+
+    <div id="main-content">
+
+      <!-- DASHBOARD -->
+      <div id="dashboard-content" class="page-section">
+        <h1 class="section-title">Dashboard</h1>
+        <p class="welcome-message">Wecome back, <span id="welcome-user">Hirushan</span>!</p>
+
+      </div>
+
+      <!-- JOB ROLES (placeholder - replace with your real markup) -->
+      <div id="jobroles-content" class="page-section">
+        <h1 class="section-title">Job Roles</h1>
+        <p>Your job role matches will appear here.</p>
+      </div>
+
+      <!-- Analysis -->
+      <div id="analysis-content" class="page-section">
+        <h1 class="section-title">Analysis</h1>
+        <p id="analyse-message">Overview:</p>
+
+
+      </div>
+
+      <!-- BOOKMARKS (placeholder - replace with your real markup) -->
+      <div id="bookmark-content" class="page-section">
+        <h1 class="section-title">Bookmarks</h1>
+        <p>Your bookmarked jobs will appear here.</p>
+      </div>
+
+    </div>
+
+    <script>
+      //Navigation of the SPA
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".sidebar-tab");
+        const sections = document.querySelectorAll(".page-section");
+
+        function showSection(targetId) {
+          sections.forEach(section => {
+            section.classList.toggle("active", section.id === targetId);
+          });
+
+          tabs.forEach(tab => {
+            tab.classList.toggle("active-tab", tab.dataset.target === targetId);
+          });
+
+          // keep the URL hash in sync so refresh/back button works
+          history.replaceState(null, "", `#${targetId}`);
+        }
+
+        tabs.forEach(tab => {
+          tab.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = tab.dataset.target;
+            showSection(targetId);
+          });
+        });
+        const initial = window.location.hash.replace("#", "") || "dashboard-content";
+        showSection(initial);
+      });
+
+      //Render skills to skill cloud in dashboard
+      function renderSkills(skills) {
+        const container = document.getElementById("skill-cloud");
+        container.innerHTML = ""; // clear existing/static tags
+
+        skills.forEach(skill => {
+          const tag = document.createElement("div");
+          tag.className = "skill-tag";
+          tag.textContent = skill;
+          container.appendChild(tag);
+        });
+      }
+      const mockSkills = ["HTML", "CSS", "JavaScript", "Python", "Java", "SQL","React","Node"];
+      renderSkills(mockSkills);
+
+      const mockVacancies  = [{job_role:"Software",company:"WSO2",location:"Colombo",link:"aasa"}]
+
+      function renderJobRole(vacancy){
+        document.getElementById("job-role-dashboard1").innerHTML=(vacancy[0].job_role);
+        document.getElementById("company-dashboard1").innerHTML=(vacancy[0].company);
+        document.getElementById("location-dashboard1").innerHTML=(vacancy[0].location);
+      }
+      renderJobRole(mockVacancies);
+
+
+
+      //Resize the page according to the scalinig of windows
+      (function () {
+        const DESIGN_DPR = 1.25;
+
+        function applyScale() {
+          const scale = DESIGN_DPR / window.devicePixelRatio;
+          document.documentElement.style.zoom = scale;
+        }
+
+        applyScale();
+        window.addEventListener("resize", applyScale);
+      })();
+    </script>
+  </body>
+</html>
